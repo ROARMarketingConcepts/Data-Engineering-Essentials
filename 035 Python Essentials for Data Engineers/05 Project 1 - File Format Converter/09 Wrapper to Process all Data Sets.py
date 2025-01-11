@@ -38,8 +38,8 @@ def file_converter(src_base_dir, tgt_base_dir, ds_name):
         
         
 def process_files(ds_names=None):
-    src_base_dir = 'data/retail_db'
-    tgt_base_dir = 'data/retail_db_json'
+    src_base_dir = '/Users/woodzsan/Desktop/Machine Learning and Data Analysis/Data-Engineering-Essentials/035 Python Essentials for Data Engineers/05 Project 1 - File Format Converter/data/retail_db'
+    tgt_base_dir = '/Users/woodzsan/Desktop/Machine Learning and Data Analysis/Data-Engineering-Essentials/035 Python Essentials for Data Engineers/05 Project 1 - File Format Converter/data/retail_db_json'
     schemas = json.load(open(f'{src_base_dir}/schemas.json'))
     if not ds_names:
         ds_names = schemas.keys()
@@ -47,5 +47,5 @@ def process_files(ds_names=None):
         print(f'Processing {ds_name}')
         file_converter(src_base_dir, tgt_base_dir, ds_name)
         
-if __name__ == '__main__':
-    process_files()
+# if __name__ == '__main__':
+process_files()
