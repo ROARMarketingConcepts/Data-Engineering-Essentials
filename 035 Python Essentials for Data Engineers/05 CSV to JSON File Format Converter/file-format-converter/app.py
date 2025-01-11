@@ -5,6 +5,8 @@ import sys
 import re
 import pandas as pd
 
+'''This script reads CSV files from a source directory, converts them to JSON, and writes them to a target directory'''
+
 def get_column_names(schemas, ds_name, sorting_key='column_position'):
     column_details = schemas[ds_name]
     columns = sorted(column_details, key=lambda col: col[sorting_key])
